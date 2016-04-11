@@ -1,0 +1,22 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* Typography Mixins */
+$font-family: 'open sans', lato, sans-serif;
+
+@mixin para-type($font-family) {
+     margin-bottom: 20px;
+     font-size: 14px;
+     line-height: 1.6em;
+     font-family: $font-family;
+}
+
+@mixin main-head($font-family){
+    font-size: 24px;
+    line-height: 1.6em;
+    font-family: $font-family;
+}
