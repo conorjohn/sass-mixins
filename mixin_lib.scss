@@ -1,3 +1,15 @@
+/* Sample colours from flat UI design */
+$monza_red: #CF000F; //207, 0, 15
+$plum: #913D88; //145, 61, 136
+$royal_blue: #4183D7; //65, 131, 215
+$eucalyptus: #26A65B; //38, 166, 91
+$lemon: #F7CA18; //247, 202, 24
+$burnt_orange:#D35400; //211, 84, 0
+$lynch_grey: #6C7A89; //108, 122, 137
+$iron: #DADFE1; //218, 223, 225
+$white_smoke: #ECECEC;
+
+/* Prefix ready mixins */
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -20,3 +32,18 @@ $font-family: 'open sans', lato, sans-serif;
     line-height: 1.6em;
     font-family: $font-family;
 }
+
+/* Hover state transitions */
+
+
+
+
+
+/* Colour Palette using lighten and darken */
+
+
+
+/* Flexbox made easy */
+
+
+
