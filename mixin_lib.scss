@@ -46,4 +46,56 @@ $font-family: 'open sans', lato, sans-serif;
 /* Flexbox made easy */
 
 
+/* Base flex container, edit into mixin*/
+.flex-container{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+  /*
+  * The main values are the "display", "flex-flow" and "justify-content"
+  *
+  */
+}
+
+/**
+  1st option: flex;
+  2nd option: ;
+*/
+
+/*
+  flex-direction: | row | row-reverse | column | column-reverse |;
+  justify-content: | flex-start | flex-end | center | space-between | space-around |;
+*/
+
+@mixin flex-container($display, $flex-flow, $justify-content){
+  display: $dispay;
+  -webkit-flex-flow: $flex-flow;
+  justify-content: $justify-content;
+}
+
+.flex-item{
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+
 
