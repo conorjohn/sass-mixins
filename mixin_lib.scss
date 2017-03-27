@@ -116,3 +116,15 @@ $font-family: 'open sans', lato, sans-serif;
 
   font-size:round($number);
 }
+
+/*http://sass-lang.com/documentation/Sass/Script/Functions.html*/
+.list-functions{
+  length($list); //returns the length of the list
+  nth($list, $n); returns specific item in a list
+  set-nth($list, $n, $value) //replaces the nth item in a list
+  join($list1, list2, [$separator]) //joins two lists into one
+  append($list1, list2, [$separator]) //appeands a single value onto the end of a list
+  zip($lists) //Combines several lists into a single multidimensional list
+  index($list, $value) //returns the position of a value within a list
+  list-separator($list) //returns the separator of a list
+}
