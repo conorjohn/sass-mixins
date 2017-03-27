@@ -100,4 +100,19 @@ $font-family: 'open sans', lato, sans-serif;
 }
 
 
+/*SASS Number Functions*/
+.number-functions{
+  width:random([$limit]); //returns a random number up to the specified limit
 
+  height:abs($number); //returns abslute value of a number
+
+  min-width:min($numbers); //Find minimum of several numbers
+
+  max-width:max($numbers); //Find maximum of several numbers
+
+  font-size:floor($number);
+
+  font-size:ceil($number);
+
+  font-size:round($number);
+}
