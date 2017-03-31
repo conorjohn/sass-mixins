@@ -164,3 +164,38 @@ $font-family: 'open sans', lato, sans-serif;
   index($list, $value) //returns the position of a value within a list
   list-separator($list) //returns the separator of a list
 }
+
+
+
+/*Example of an args list*/
+/*the ... spread after gradient means that it can accept any number of arguments into that one variable*/
+@mixin linear-gradient($direction, $gradients...) {
+  background-color: nth($gradients, 1);
+  background-image: linear-gradient($direction, $gradients...);
+}
+
+.selector {
+  @include linear-gradient(to right, magenta, red, orange, yellow, green, blue, purple);
+}
+
+$parameters: (
+  'c': 'kittens',
+  'a': true,
+  'b': 42
+);
+
+$value: dummy($parameters...);
+
+/*/// Helper mixin to size elements*/
+/*/// @param {List} $size - Width and possibly height (but not mandatory)*/
+@mixin size($size) {
+  $height: nth($size, 1);
+  $width: $height;
+
+  @if length($size) > 1 {
+    $height: nth($size, 2);
+  }
+
+  width: $width;
+  height: $height;
+}
