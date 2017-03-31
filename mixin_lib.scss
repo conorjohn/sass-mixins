@@ -99,6 +99,37 @@ $font-family: 'open sans', lato, sans-serif;
   text-align: center;
 }
 
+.inheritance{
+  @extend .flex-item;
+  background-color: #fff;
+  color: #000;
+}
+
+
+@mixin multi-col-mixin($num-of-cols, $col-gutter, $col-rule) {
+  -webkit-column-count: $num-of-cols; /* Ch, Saf, And, BB  */
+     -moz-column-count: $num-of-cols; /* Fx */
+          column-count: $num-of-cols; /* IE 10, Op 11.1+ */
+
+  -webkit-column-gap: $col-gutter;
+     -moz-column-gap: $col-gutter;
+          column-gap: $col-gutter;
+
+  -webkit-column-rule: $col-rule;
+     -moz-column-rule: $col-rule;
+          column-rule: $col-rule;
+}
+
+.example-of-multi-col-mixin{
+  @include multi-col-mixin(2, 10px, 1px solid #000);  
+}
+
+@mixin rotate-mixin($degrees) {
+  -webkit-transform: rotate($degrees); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: rotate($degrees); /* IE 9 */
+          transform: rotate($degrees); /* IE 10, Fx 16+, Op 12.1+ */
+}
+
 
 /*SASS Number Functions*/
 .number-functions{
@@ -119,12 +150,12 @@ $font-family: 'open sans', lato, sans-serif;
 
 /*miscellaneous functions*/
 .border-class{
-  border-right: if(true, 2px, 1px); /* => 2px*/
+  border-right: if(true, 2px, 1px);  /* => 2px*/
 }
 
 /*http://sass-lang.com/documentation/Sass/Script/Functions.html*/
 .list-functions{
-  length($list); //returns the length of the list
+  height: length($list); //returns the length of the list
   nth($list, $n); returns specific item in a list
   set-nth($list, $n, $value) //replaces the nth item in a list
   join($list1, list2, [$separator]) //joins two lists into one
