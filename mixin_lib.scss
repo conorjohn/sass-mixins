@@ -119,7 +119,12 @@ a {
 }
 
 
-
+/*Reusable margins*/
+@mixin margins($margins){
+  h1, h2,h3, h4, h5, h6, p, small, strong, label, span{
+    margin:8px;
+  }
+}
 
 
 /**
