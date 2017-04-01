@@ -40,7 +40,13 @@ $font-family: 'open sans', lato, sans-serif;
 
 
 /* Colour Palette using lighten and darken */
+@mixin colour-palette($colour){
+  $shade-one: lighten($colour, 10%);
+  $shade-two: $colour;
+  $shade-three: darken($colour, 10%);
 
+  /* Function to find complementary colours? */
+}
 
 
 /* Flexbox made easy */
@@ -50,7 +56,7 @@ $font-family: 'open sans', lato, sans-serif;
   justify-content: $justify;
 }
 
-/*this will create the basis for the flexbox container*/
+/*this will create the basis for the flexbox container. */
 .flex-box-container{
   @include flex-box(flex, row wrap, space-around)
 }
