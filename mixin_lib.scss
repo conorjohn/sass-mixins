@@ -126,6 +126,12 @@ a {
   }
 }
 
+/*Animate easily with sass to avoid Angular animations with heavy change detection*/
+@mixin animate-off-screen(direction:  right){
+  /*transition which property width height, duration, timing func ease-in, delay period*/
+  transition: all 2s ease-in  5s; 
+}
+
 
 /**
   1st option: flex;
