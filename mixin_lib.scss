@@ -82,6 +82,46 @@ $font-family: 'open sans', lato, sans-serif;
   */
 }
 
+/*using sass if else statements*/
+$time: morning;
+a {
+  @if $time == morning {
+    color: red;
+  } @else if $time == afternoon {
+    color: blue;
+  } @else {
+    color: grey;
+  }
+}
+
+@mixin theme($theme){
+  @if $theme == morning{
+    background-color:   $morning-bg;
+    color:  $morning-colour;
+    a{
+      color:  $morning-link;
+    }
+  } @else @if $theme == autumn{
+    background-color:   $autumn-bg;
+    color:  $autumn-colour;
+    a{
+      color:  $autumn-link;
+    } @else{
+      /*etc*/
+    }
+  }
+}
+
+/*so if designer passes in morning, get a morning themed colour palette?*/
+.theme{
+  /*5 themes morning, dawn, dusk, autumn, crisp-night*/
+  @include theme(crisp-night)
+}
+
+
+
+
+
 /**
   1st option: flex;
   2nd option: ;
