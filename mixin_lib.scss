@@ -44,7 +44,16 @@ $font-family: 'open sans', lato, sans-serif;
 
 
 /* Flexbox made easy */
+@mixin flex-box($display, $flex-flow, $justify){
+  display:$display;
+  flex-flow: $flex-flow;
+  justify-content: $justify;
+}
 
+/*this will create the basis for the flexbox container*/
+.flex-box-container{
+  @include flex-box(flex, row wrap, space-around)
+}
 
 /* Base flex container, edit into mixin*/
 .flex-container{
