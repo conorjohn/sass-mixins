@@ -1,0 +1,12 @@
+.base{
+  color:red;
+
+  &:hover {color:green;}
+  &::after {content: "?";}
+}
+
+.section{
+  //can also extend multiple at once eg @extend .base, .example, .container but can get messy
+  @extend .base;
+  background: complement(red);
+}
