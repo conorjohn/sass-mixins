@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Sass functions and mixins",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/conorjohn/sass-mixins.git"
@@ -14,9 +11,16 @@
     "sass"
   ],
   "author": "Conor John O'Reilly",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/conorjohn/sass-mixins/issues"
   },
-  "homepage": "https://github.com/conorjohn/sass-mixins#readme"
+  "homepage": "https://github.com/conorjohn/sass-mixins#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "node-sass scss/main.scss -o css/main.css"
+  }
 }
