@@ -2,3 +2,14 @@ $var: #fff;
 body{
   background-color: $var;
 }
+
+//avoid nesting beyond 3 levels deep for proper practise
+
+.container{
+  &-box{
+    //the parent selector allows you to add parent class name as a prefix
+    // .container-box class, be careful about using this with hover
+  }
+}
+
+@import "variables";

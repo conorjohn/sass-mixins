@@ -1,0 +1,14 @@
+//Variables are subject to scope
+//If a var is defined inside a class, it isn't available inside another
+//it will be available inside nested classes but no others, see example
+.blue{
+  $blue: blue;
+
+  .other-class{
+    color:$blue;
+  }
+}
+
+.class{
+  //color: $blue;
+}
