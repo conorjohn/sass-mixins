@@ -12,4 +12,14 @@ body{
   }
 }
 
+@import "colors";
 @import "variables";
+
+ul{
+  li:nth-child(odd){
+    color:$base-color;
+  }
+  li:nth-child(even){
+    color:$complementary-base-color;
+  }
+}

@@ -3,3 +3,9 @@ body {
 
 .blue .other-class {
   color: blue; }
+
+ul li:nth-child(odd) {
+  color: red; }
+
+ul li:nth-child(even) {
+  color: cyan; }

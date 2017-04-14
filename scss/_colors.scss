@@ -1,0 +1,5 @@
+//using the complement function, a colour 180 degrees from the input colour will be returned
+//use this for automated theming?
+//example can be viewed on the index file
+$base-color: red;
+$complementary-base-color: complement($base-color);
