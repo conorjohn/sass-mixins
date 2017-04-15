@@ -2,4 +2,10 @@
 @for $i from 1 through 10 { //this statement will go straight through to the last number
   .order {order:$i} //this kind of use of the for loop will simply overwrite the same class multiple times
   .col-#{$i} {width: 100% / $i}
+    $value: 0.5 * $i; //gets a half value
+    $has-decimal: floor($value) != $value; //checks to see if the value contains a decimal
+    $class-name: if($has-decimal, #{$value - .5}pt5, $value); //returns the class name to be used below
+  .mt-#{$class-name}rem{ //interpolate the variable class-name
+    margin-top:#{$value}rem;
+  }
 }
