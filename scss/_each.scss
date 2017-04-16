@@ -1,0 +1,10 @@
+//a SASS list is a collection of comma separated values, similar to an array
+// See the variable as an example
+$array: iron-man, thor, hulk, captain-america;
+
+@each $hero in $array {
+  .#{$hero}-logo{
+    //This will loop out hero-logo classes using the variable to find the image
+    background-image: url("../images/#{$hero}-logo.gif");
+  }
+}
