@@ -4,6 +4,36 @@ body {
 .blue .other-class {
   color: blue; }
 
+.example-one {
+  background: red; }
+
+.example-two {
+  background: rgba(192, 192, 192, 0.5), url("./some/img/filename.jpg"); }
+
+.example-three {
+  background: rgba(192, 192, 192, 0.5), url("./some/img/magic.jpg"); }
+
+.stuff {
+  font-size: 29.0304px; }
+
+h1 {
+  font-size: 41.80378px; }
+
+h2 {
+  font-size: 34.83648px; }
+
+h3 {
+  font-size: 29.0304px; }
+
+h4 {
+  font-size: 24.192px; }
+
+h5 {
+  font-size: 20.16px; }
+
+h6 {
+  font-size: 16.8px; }
+
 ul li:nth-child(odd) {
   color: red; }
 
