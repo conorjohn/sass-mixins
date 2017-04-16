@@ -8,3 +8,18 @@ $array: iron-man, thor, hulk, captain-america;
     background-image: url("../images/#{$hero}-logo.gif");
   }
 }
+
+//this is how to lay out a map in SCSS
+$breakpoints: (sm: 365px, md: 767px, lg: 992px, xl: 1200px);
+
+//revise these, the proportions wont be correct
+$container-widths-and-breakpoints: (250px: 375px, 500px: 767px, 750px: 992px, 1000px: 1200px)
+
+@each $size, $bp in $breakpoints{
+  @media only screen and (min-width: $bp){
+    .container-width{
+      width: $bp;
+      &::before{ content: "#{$size}";}
+    }
+  }
+}
