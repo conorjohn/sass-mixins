@@ -1,0 +1,13 @@
+$translucent-color: rgba(silver, 0.5);
+// SASS functions can have default arguments
+// They may also have optional arguments
+@function background($color: $translucent-color, $img: null, $extra-values...){
+  //here we will use the if function to check to see if a background image is included
+  $url: if($img, url("./some/img/#{$url}.jpg"), null);
+  @return $color, $url;
+}
+
+//A similar output can be achieved using mixins, mixins return reusable styles, functions return reusable values
+.example-one{ background: background(red)}
+.example-one{ background: background($url: filename)}
+.example-one{ background: background($translucent-color, magic, center fixed); }
