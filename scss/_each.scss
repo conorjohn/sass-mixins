@@ -13,7 +13,7 @@ $array: iron-man, thor, hulk, captain-america;
 $breakpoints: (sm: 365px, md: 767px, lg: 992px, xl: 1200px);
 
 //revise these, the proportions wont be correct
-$container-widths-and-breakpoints: (250px: 375px, 500px: 767px, 750px: 992px, 1000px: 1200px)
+$container-widths-and-breakpoints: (250px: 375px, 500px: 767px, 750px: 992px, 1000px: 1200px);
 
 @each $size, $bp in $breakpoints{
   @media only screen and (min-width: $bp){
@@ -23,3 +23,16 @@ $container-widths-and-breakpoints: (250px: 375px, 500px: 767px, 750px: 992px, 10
     }
   }
 }
+
+//another way to lay out an arg list is using parenthesis to improve readability
+$arg-list: (1, 365px, 375px, crimson),
+        (2, 767px, 992px, purple),
+        (3, 992px, 1200px, aquamarine);
+//a variable in the loop is needed for each of the arguments
+@each $prefix, $breakpoint-start, $breakpoint-end, $color in $arg-list{
+  @media only screen and (min-width:$breakpoint-start) and (max-width: $breakpoint-end){
+    .#{nth($array, $i)}{background-color: $color}
+  }
+}
+
+//map-get() is an interesting function, review it at another time
